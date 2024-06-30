@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\orchestrator.csproj": {}
+    "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Orchestrator.csproj": {}
   },
   "projects": {
-    "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\orchestrator.csproj": {
+    "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Orchestrator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\orchestrator.csproj",
-        "projectName": "orchestrator",
-        "projectPath": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\orchestrator.csproj",
+        "projectUniqueName": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Orchestrator.csproj",
+        "projectName": "Orchestrator",
+        "projectPath": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Orchestrator.csproj",
         "packagesPath": "C:\\Users\\Tiago Lima\\.nuget\\packages\\",
         "outputPath": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\obj\\",
         "projectStyle": "PackageReference",

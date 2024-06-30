@@ -1,10 +1,12 @@
 # Package versions
-- Dotnet 6.0
-- NodeJS 18.14
-- NestJS 10.3.2
-- Rabbit 3.13
-- Mongo 7.0.0
-- Mongo Express 1.0.2-20-alpine3.19
+- Dotnet - 6.0
+- NodeJS - 18.14
+- NestJS - 10.3.2
+- Rabbit - 3.13
+- Mongo - 7.0.0
+- Mongo - Express 1.0.2-20-alpine3.19
+- Prometheus - v2.45.6
+- Grafana - 9.5.20
 
 # Create a new project orchestrator masstransit saga
 ```dotnet new create webapi --output orchestrator```

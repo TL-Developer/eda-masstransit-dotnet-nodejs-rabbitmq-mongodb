@@ -27,7 +27,7 @@ public class OrderController(IBus bus, ILogger<OrderController> logger, IOrderRe
       await endpoint.Send(new Order{
         ProductName = result.ProductName,
         Quantity = result.Quantity,
-        CorrelationId = new Guid()
+        CustomerName = result.CustomerName
       }); 
 
       _logger.LogInformation("Send order: {order.Name}", order.ProductName);

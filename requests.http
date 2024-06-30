@@ -3,6 +3,7 @@ POST http://localhost:5103/orders
 content-type: application/json
 
 {
+  "customerName": "Tiago lima",
   "productName": "X-Salada Duplo",
   "quantity": "1"
 }

@@ -23,6 +23,7 @@ export class Worker {
           productName: message.productName,
           quantity: message.quantity,
           status: message.status,
+          correlationId: message.correlationId,
         });
         
         await newOrder.save();

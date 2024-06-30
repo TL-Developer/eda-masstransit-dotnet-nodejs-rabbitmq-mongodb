@@ -9,19 +9,19 @@ namespace Orchestrator.Entities
         [BsonElement("_id"), BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
         [BsonElement("productName")]
-        public required Guid CorrelationId { get; set; }
-        [BsonElement("correlationId")]
         public required string ProductName { get; set; }
+        [BsonElement("customerName")]
+        public required string CustomerName { get; set; }
+        [BsonElement("correlationId")]
+        public string CorrelationId { get; private set; } = Guid.NewGuid().ToString();        
         [BsonElement("quantity")]
         public required string Quantity { get; set; }
         [BsonElement("status")]
         public OrderStatusEnum Status { get; set; }
         [BsonElement("orderCreatedAt")]
         public DateTime OrderCreatedAt { get; set; } = DateTime.Now;
-        [BsonElement("orderCookingAt")]
-        public DateTime OrderCookingAt { get; set; }
         [BsonElement("orderDeliveredAt")]
-        public DateTime OrderDeliveredAt { get; set; }
+        public DateTime? OrderDeliveredAt { get; set; } = null;
     }
 
     public enum OrderStatusEnum
