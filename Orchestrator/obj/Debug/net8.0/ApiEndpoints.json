@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "Orchestrator.Controllers.OrderController",
+    "Method": "Post",
+    "RelativePath": "order",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "order",
+        "Type": "Orchestrator.Entities.Order",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Orchestrator.Entities.Order",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

@@ -1,0 +1,49 @@
+version: '3.1'
+
+networks:
+  app-network:
+    name: app-network
+    driver:
+      bridge
+
+services:
+  rabbitmq:
+    image: masstransit/rabbitmq:3.13
+    ports:
+      - 5672:5672
+      - 15672:15672
+      - 15692:15692
+    networks:
+      - app-network
+
+  mongodb:
+    image: mongo:7.0.0
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+    networks:
+      - app-network
+
+  prometheus:
+    image: prom/prometheus:v2.45.6
+    ports:
+      - 9090:9090
+    volumes:
+      - "./conf/prometheus.yml:/etc/prometheus/prometheus.yml"
+    command: 
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+    networks:
+      - app-network
+
+  grafana:
+    image: grafana/grafana:9.5.20
+    ports:
+      - 3000:3000
+    networks:
+      - app-network

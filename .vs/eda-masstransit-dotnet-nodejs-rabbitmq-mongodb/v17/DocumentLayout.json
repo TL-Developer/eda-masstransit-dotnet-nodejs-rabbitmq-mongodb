@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{77F3FB6E-9DA5-4D3A-9515-26378F9BB685}|orchestrator\\orchestrator.csproj|c:\\git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\orchestrator\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77F3FB6E-9DA5-4D3A-9515-26378F9BB685}|orchestrator\\orchestrator.csproj|solutionrelative:orchestrator\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77F3FB6E-9DA5-4D3A-9515-26378F9BB685}|orchestrator\\orchestrator.csproj|c:\\git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\orchestrator\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77F3FB6E-9DA5-4D3A-9515-26378F9BB685}|orchestrator\\orchestrator.csproj|solutionrelative:orchestrator\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77F3FB6E-9DA5-4D3A-9515-26378F9BB685}|orchestrator\\orchestrator.csproj|c:\\git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\orchestrator\\repository\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77F3FB6E-9DA5-4D3A-9515-26378F9BB685}|orchestrator\\orchestrator.csproj|solutionrelative:orchestrator\\repository\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "Orchestrator\\Services\\OrderService.cs",
+              "ToolTip": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Services\\OrderService.cs",
+              "RelativeToolTip": "Orchestrator\\Services\\OrderService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T23:46:09.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "Orchestrator\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "Orchestrator\\Controllers\\OrderController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T23:46:04.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Repository\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "Orchestrator\\Repository\\OrderRepository.cs",
+              "ToolTip": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Repository\\OrderRepository.cs",
+              "RelativeToolTip": "Orchestrator\\Repository\\OrderRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T23:45:57.651Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

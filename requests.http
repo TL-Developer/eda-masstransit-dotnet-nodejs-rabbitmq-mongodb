@@ -1,0 +1,19 @@
+# CREATE ORDER
+POST http://localhost:5103/orders
+content-type: application/json
+
+{
+  "productName": "X-Salada Duplo",
+  "quantity": "1"
+}
+
+###
+
+# COOKING - GET ORDERS TO PREPARE
+GET http://localhost:8088/orders
+
+###
+
+# COOKING - ORDER DELIVERY
+POST http://localhost:8088/orders/668027f872d73a9fd9b4f468
+content-type: application/json
