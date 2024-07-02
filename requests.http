@@ -1,5 +1,5 @@
 # CREATE ORDER
-POST http://localhost:5103/orders
+POST http://localhost:5103/api/v1/orders
 content-type: application/json
 
 {
@@ -10,11 +10,9 @@ content-type: application/json
 
 ###
 
-# COOKING - GET ORDERS TO PREPARE
-GET http://localhost:8088/orders
+# COOKING - ORDER
+POST http://localhost:5103/api/v1/kitchen/orders/92cfd7c4-b89f-4674-958b-af0040223aaf
+content-type: application/json
+
 
 ###
-
-# COOKING - ORDER DELIVERY
-POST http://localhost:8088/orders/668027f872d73a9fd9b4f468
-content-type: application/json

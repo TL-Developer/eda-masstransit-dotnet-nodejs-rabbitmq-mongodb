@@ -13,7 +13,7 @@ namespace Orchestrator.Entities
         [BsonElement("customerName")]
         public required string CustomerName { get; set; }
         [BsonElement("correlationId")]
-        public string CorrelationId { get; private set; } = Guid.NewGuid().ToString();        
+        public string CorrelationId { get; set; } = Guid.NewGuid().ToString();        
         [BsonElement("quantity")]
         public required string Quantity { get; set; }
         [BsonElement("status")]

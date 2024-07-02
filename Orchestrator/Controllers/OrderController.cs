@@ -6,7 +6,7 @@ using Orchestrator.Entities;
 namespace Orchestrator.Controllers;
 
 [ApiController]
-[Route("orders")]
+[Route("api/v1/orders")]
 public class OrderController(IBus bus, ILogger<OrderController> logger, IOrderRepository orderRepository) : ControllerBase
 {
     private readonly ILogger<OrderController> _logger = logger;
@@ -24,20 +24,10 @@ public class OrderController(IBus bus, ILogger<OrderController> logger, IOrderRe
 
       var endpoint = await _bus.GetSendEndpoint(new Uri(ORDERS_CREATED));
 
-      await endpoint.Send(new Order{
-        ProductName = result.ProductName,
-        Quantity = result.Quantity,
-        CustomerName = result.CustomerName
-      }); 
+      await endpoint.Send(result); 
 
       _logger.LogInformation("Send order: {order.Name}", order.ProductName);
 
       return Ok(result);
     }
-
-    // [HttpPost("")]
-    // public async Task<ActionResult<Order>> Post(Order order)
-    // { 
-      
-    // }
 }

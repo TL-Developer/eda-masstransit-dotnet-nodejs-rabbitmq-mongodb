@@ -1,5 +1,5 @@
 import { Channel } from "amqplib";
-import { SetupMongoDB } from "./mongodb";
+import { Order, SetupMongoDB } from "./mongodb";
 import { Logger } from "./logger";
 
 export class Worker {
@@ -17,9 +17,12 @@ export class Worker {
   public async readMessage() {
     this.channel.consume(this.QUEUE, async (msg) => {
       if (msg !== null) {
-        const message = JSON.parse(msg.content.toString()).message;
+         const message: Order = JSON.parse(msg.content.toString()).message;
+
+        console.log(message);
 
         const newOrder = new this.OrdersModel({
+          customerName: message.customerName,
           productName: message.productName,
           quantity: message.quantity,
           status: message.status,

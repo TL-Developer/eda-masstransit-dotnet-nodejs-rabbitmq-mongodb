@@ -47,5 +47,5 @@ C:\Git\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\Orchestrator\bin\Debug\net
 C:\Git\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\Orchestrator\bin\Debug\net8.0\runtimes\linux\native\libmongocrypt.so
 C:\Git\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\Orchestrator\bin\Debug\net8.0\runtimes\osx\native\libmongocrypt.dylib
 C:\Git\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\Orchestrator\bin\Debug\net8.0\runtimes\win\native\mongocrypt.dll
-C:\Git\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\Orchestrator\obj\Debug\net8.0\Orchestr.E23A4B34.Up2Date
 C:\Git\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\Orchestrator\obj\Debug\net8.0\Orchestrator.sourcelink.json
+C:\Git\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\Orchestrator\obj\Debug\net8.0\Orchestr.E23A4B34.Up2Date

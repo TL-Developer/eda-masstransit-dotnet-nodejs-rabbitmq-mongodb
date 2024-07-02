@@ -16,5 +16,10 @@ namespace Orchestrator.Services
         {
             return _orderRepository.GetAllAsync();
         }
+
+        public Task<Order> GetByCorrelationId(string correlationId)
+        {
+            return _orderRepository.GetByCorrelationId(correlationId);
+        }
     }
 }
