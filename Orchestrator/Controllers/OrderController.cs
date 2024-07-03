@@ -13,20 +13,13 @@ public class OrderController(IBus bus, ILogger<OrderController> logger, IOrderRe
     private readonly IBus _bus = bus;
     private readonly IOrderRepository _orderRespository = orderRepository;
 
-    private const string ORDERS_CREATED = "queue:orders_created";
-
     [HttpPost("")]
     public async Task<ActionResult<Order>> Post(Order order)
     { 
+      order.Status = OrderStatusEnum.Created;
       var result = await _orderRespository.CreateAsync(order);
 
-      order.Status = OrderStatusEnum.Created;
-
-      var endpoint = await _bus.GetSendEndpoint(new Uri(ORDERS_CREATED));
-
-      await endpoint.Send(result); 
-
-      _logger.LogInformation("Send order: {order.Name}", order.ProductName);
+      _logger.LogInformation("Send order: {order}", order);
 
       return Ok(result);
     }

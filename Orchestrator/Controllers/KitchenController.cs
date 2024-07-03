@@ -13,7 +13,7 @@ public class KitchenController(IBus bus, ILogger<KitchenController> logger, IOrd
     private readonly IBus _bus = bus;
     private readonly IOrderRepository _orderRespository = orderRepository;
 
-    private const string ORDERS_COOKING = "queue:orders_created";
+    private const string ORDERS_COOKING = "queue:orders_cooking";
 
     [HttpPost("orders/{correlationId}")]
     public async Task<ActionResult<Order>> UpdateOrderAsync(string correlationId)

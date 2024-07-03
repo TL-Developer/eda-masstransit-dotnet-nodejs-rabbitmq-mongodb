@@ -24,10 +24,10 @@ export class SetupRabbitMq {
   public async init(): Promise<void> {
     await this.getConnection();
     await this.createChannel();
-    await this.channel.assertQueue(ORDERS_QUEUE);
+    // await this.channel.assertQueue(ORDERS_QUEUE);
     await this.channel.assertQueue(COOKING_QUEUE);
 
-    new Worker(this.channel, ORDERS_QUEUE);
+    new Worker(this.channel, COOKING_QUEUE);
   }
 
   public sendMessage(payload: any) {

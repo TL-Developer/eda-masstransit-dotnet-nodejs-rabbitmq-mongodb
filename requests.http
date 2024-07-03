@@ -11,7 +11,7 @@ content-type: application/json
 ###
 
 # COOKING - ORDER
-POST http://localhost:5103/api/v1/kitchen/orders/92cfd7c4-b89f-4674-958b-af0040223aaf
+POST http://localhost:5103/api/v1/kitchen/orders/b1efd492-a811-4b4a-8362-a0d38630d409
 content-type: application/json
 
 
