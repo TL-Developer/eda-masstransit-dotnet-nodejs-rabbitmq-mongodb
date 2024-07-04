@@ -48,14 +48,6 @@
                 <mxCell id="148" style="edgeStyle=none;html=1;fontSize=9;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="28" target="15" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="155" style="edgeStyle=none;html=1;fontSize=9;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.994;entryY=0.412;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="28" target="114" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="920" y="16"/>
-                            <mxPoint x="920" y="114"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
                 <mxCell id="28" value="Kitchen Service" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="960" y="-14" width="110" height="60" as="geometry"/>
                 </mxCell>

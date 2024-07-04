@@ -1,25 +1,9 @@
 import mongoose from 'mongoose';
 
-export enum OrderStatusEnum {
-  Created,
-  Cooking,
-  Delivered,
-  Finish
-}
-
-export type Order = {
-  customerName: string,
-  productName: string,
-  quantity: string,
-  status: number,
-  correlationId: String,
-}
-
-const orderSchema = new mongoose.Schema({
+const orderSchemaModel = new mongoose.Schema({
   customerName: String,
   productName: String,
   quantity: String,
-  status: Number,
   correlationId: String,
 }, { timestamps: true });
 
@@ -33,6 +17,6 @@ export class SetupMongoDB {
   }
 
   model () {
-    return mongoose.model('orders', orderSchema);
+    return mongoose.model('orders', orderSchemaModel);
   }
 }

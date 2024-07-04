@@ -1,4 +1,4 @@
-# CREATE ORDER
+# CREATE - ORDER
 POST http://localhost:5103/api/v1/orders
 content-type: application/json
 
@@ -11,8 +11,18 @@ content-type: application/json
 ###
 
 # COOKING - ORDER
-POST http://localhost:5103/api/v1/kitchen/orders/b1efd492-a811-4b4a-8362-a0d38630d409
+POST http://localhost:5103/api/v1/kitchen/orders/96562140-31b6-4cdf-a00c-9f4aa238c12c
 content-type: application/json
 
 
 ###
+
+# DELIVERY - ORDER
+POST http://localhost:5103/api/v1/delivery/orders/96562140-31b6-4cdf-a00c-9f4aa238c12c
+content-type: application/json
+
+###
+
+# FINISH - ORDER
+POST http://localhost:5103/api/v1/orders/96562140-31b6-4cdf-a00c-9f4aa238c12c/finish
+content-type: application/json

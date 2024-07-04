@@ -23,4 +23,14 @@ public class OrderController(IBus bus, ILogger<OrderController> logger, IOrderRe
 
       return Ok(result);
     }
+
+    [HttpPost("orders/{correlationId}/finish")]
+    public ActionResult UpdateOrderFinish(string correlationId)
+    {
+        _ = _orderRespository.UpdateOrderAsync(correlationId, OrderStatusEnum.Finish);
+
+        _logger.LogInformation("Send kitchen order: {correlationId}", correlationId);
+
+        return Ok();
+    }
 }
