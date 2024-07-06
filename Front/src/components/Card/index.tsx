@@ -1,8 +1,14 @@
+import { Order } from "../../types";
+import { CUSTOMER_NAME } from "../../pages/Checkout";
+import Loading from "../Loading";
+
 interface ICardProps {
   title: string;
   description: string;
   tags?: string[],
-  handleClick?(): void;
+  quantity?: number,
+  loading?: boolean,
+  handleClick?(order: Order): void;
   btn?: string;
   children?: React.ReactNode;
 }
@@ -14,8 +20,11 @@ const Card: React.FC<ICardProps> = ({
   handleClick,
   children,
   btn = 'Comprar 🛍️',
+  quantity = 1,
+  loading = false,
 }) => (
   <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+    {loading && <Loading />}
     <img className="w-full" src="http://lorempixel.com.br/500/500" alt="Sunset in the mountains" />
     <div className="px-6 py-4">
       <div className="font-bold text-xl mb-2">{title}</div>
@@ -33,7 +42,11 @@ const Card: React.FC<ICardProps> = ({
     </div>
     {handleClick && (
       <div className="p-5">
-        <button className="w-full" type="button" onClick={() => handleClick()}>{btn}</button>
+        <button className="w-full" type="button" onClick={() => handleClick({
+          customerName: CUSTOMER_NAME,
+          productName: title,
+          quantity,
+        })}>{btn}</button>
       </div>
     )}
   </div>

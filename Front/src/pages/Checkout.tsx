@@ -1,15 +1,17 @@
+import { useState } from "react";
 import Card from "../components/Card";
 import { NavLink, Outlet } from "react-router-dom";
 import Timeline from "../components/Timeline";
-import { useState } from "react";
+import { Order, TCardapio } from "../types";
+import axios from "axios";
+
+export const CUSTOMER_NAME = 'Tiago Lima';
 
 const CheckoutPage = () => {
-  const [name] = useState('Tiago Lima');
-
   return (
     <div className="flex flex-col gap-5">
       <header>
-        <h1>Olá, <span className="font-bold">{name}</span></h1>
+        <h1>Olá, <span className="font-bold">{CUSTOMER_NAME}</span></h1>
       </header>
       <section className="flex gap-5">
         <ul className="flex">
@@ -31,34 +33,74 @@ const CheckoutPage = () => {
   );
 }
 
-CheckoutPage.Cardapio = () => (
-  <div className="flex gap-5">
-    <Card
-      title="Nerd Burger"
-      description="Hamburger simples"
-      tags={['#Burger']}
-      handleClick={() => {}}
-    />
-    <Card
-      title="Nerd Salada"
-      description="Hamburger simples com salada"
-      tags={['#Salada']}
-      handleClick={() => {}}
-    />
-    <Card
-      title="Nerd Dog"
-      description="O doguinho preferido"
-      tags={['#Dog']}
-      handleClick={() => {}}
-    />
-    <Card
-      title="Nerdão"
-      description="O hamburguer completão"
-      tags={['#Tudo']}
-      handleClick={() => {}}
-    />
-  </div>
-);
+CheckoutPage.Cardapio = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [loading, setLoading] = useState(false);
+
+  const cardapio: TCardapio[] = [
+    {
+      customerName: 'Tiago Lima',
+      productName: 'Nerd Burger',
+      description: 'Hamburger simples',
+      quantity: 1,
+      tags: ['#Burguer'],
+    },
+    {
+      customerName: 'Tiago Lima',
+      productName: 'Nerd Salada',
+      description: 'Hamburger simples com salada',
+      quantity: 1,
+      tags: ['#Salada'],
+    },
+    {
+      customerName: 'Tiago Lima',
+      productName: 'Nerd Dog',
+      description: 'O doguinho preferido',
+      quantity: 1,
+      tags: ['#Dog'],
+    },
+    {
+      customerName: 'Tiago Lima',
+      productName: 'Nerdão',
+      description: 'O hamburguer completão',
+      quantity: 1,
+      tags: ['#Tudo'],
+    },
+  ];
+  const handleClick = async (order: Order) => {
+    setLoading(true);
+
+    try {
+      await axios.post('http://localhost:5103/api/v1/orders', order);
+
+      alert('Pedido cadastradado com sucesso');
+    } catch (error) {
+      console.log(error);
+    }
+    finally {
+      setLoading(false);
+    }
+  };
+  
+  return (
+    <div className="flex gap-5">
+      {cardapio.map(({
+        productName, description, tags
+      }) => (
+        <div className="relative">
+          <Card
+            key={productName}
+            title={productName}
+            description={description}
+            tags={tags}
+            loading={loading}
+            handleClick={handleClick}
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
 
 CheckoutPage.MeusPedidos = () => (
   <div className="flex flex-col gap-5">
