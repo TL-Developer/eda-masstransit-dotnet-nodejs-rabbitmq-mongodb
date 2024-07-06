@@ -14,16 +14,8 @@ builder.Services.AddSingleton<MongoDbService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 
-// Adding Masstransit with RabbitMQ
 builder.Services.AddMassTransit(bus =>
 {
-    // var entryAssembly = Assembly.GetEntryAssembly();
-
-    // bus.AddConsumers(entryAssembly);
-    // bus.AddSagaStateMachines(entryAssembly);
-    // bus.AddSagas(entryAssembly);
-    // bus.AddActivities(entryAssembly);
-
     bus.UsingRabbitMq((context, config) =>
     {
         config.Host("localhost", "/", h => {

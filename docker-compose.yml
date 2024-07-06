@@ -44,6 +44,6 @@ services:
   grafana:
     image: grafana/grafana:9.5.20
     ports:
-      - 3000:3000
+      - 3500:3000
     networks:
       - app-network

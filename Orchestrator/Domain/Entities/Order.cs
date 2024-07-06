@@ -20,8 +20,12 @@ namespace Orchestrator.Entities
         public OrderStatusEnum Status { get; set; }
         [BsonElement("orderCreatedAt")]
         public DateTime OrderCreatedAt { get; set; } = DateTime.Now;
+        [BsonElement("orderCookingAt")]
+        public DateTime? OrderCookingAt { get; set; } = null;
         [BsonElement("orderDeliveredAt")]
         public DateTime? OrderDeliveredAt { get; set; } = null;
+        [BsonElement("orderFinishAt")]
+        public DateTime? OrderFinishAt { get; set; } = null;
     }
 
     public enum OrderStatusEnum

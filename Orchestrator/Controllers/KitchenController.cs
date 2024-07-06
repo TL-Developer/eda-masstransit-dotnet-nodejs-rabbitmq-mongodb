@@ -18,16 +18,19 @@ public class KitchenController(IBus bus, ILogger<KitchenController> logger, IOrd
     [HttpPost("orders/{correlationId}")]
     public async Task<ActionResult<Order>> UpdateOrderAsync(string correlationId)
     {
-        _ = _orderRespository.UpdateOrderAsync(correlationId, OrderStatusEnum.Cooking);
+      Order order = await _orderRespository.GetByCorrelationId(correlationId);
 
-      var orderFound = await _orderRespository.GetByCorrelationId(correlationId);
+      order.Status = OrderStatusEnum.Cooking;
+      order.OrderCookingAt = DateTime.Now;
 
-      var endpoint = await _bus.GetSendEndpoint(new Uri(ORDERS_COOKING));
+        _ = _orderRespository.UpdateOrderAsync(correlationId, order);
 
-      await endpoint.Send(orderFound); 
+      ISendEndpoint endpoint = await _bus.GetSendEndpoint(new Uri(ORDERS_COOKING));
+
+      await endpoint.Send(order); 
 
       _logger.LogInformation("Send kitchen order: {correlationId}", correlationId);
 
-      return Ok(orderFound);
+      return Ok(order);
     }
 }

@@ -32,14 +32,11 @@ namespace orchestrator.Repository
             return _orders.Find(filter).FirstOrDefault();
         }
 
-        public async Task UpdateOrderAsync(string correlationId, OrderStatusEnum status)
+        public async Task UpdateOrderAsync(string correlationId, Order order)
         {
-            var filter = Builders<Order>.Filter.Eq(or => or.CorrelationId, correlationId);
-            
-            var update = Builders<Order>.Update
-                .Set(or => or.Status, status);
-
-            _orders.UpdateOne(filter, update);
+           var filter = Builders<Order>.Filter.Eq(or => or.CorrelationId, correlationId);
+           
+            _orders.ReplaceOne(filter, order);
         }
     }
 }

@@ -223,8 +223,8 @@
                 <mxCell id="177" value="emilly&lt;br&gt;x tudo: 3" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fontSize=9;fontColor=#00FF00;" parent="1" vertex="1">
                     <mxGeometry x="655" y="-200" width="80" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="178" value="FILA DE ENTREGA DE PEDIDOS" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#00FF00;" parent="1" vertex="1">
-                    <mxGeometry x="480" y="-230" width="160" height="20" as="geometry"/>
+                <mxCell id="178" value="FILA DE ENTREGA&amp;nbsp;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=9;fontColor=#00FF00;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="-230" width="110" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="185" style="edgeStyle=none;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fontSize=9;fontColor=#00FF00;" parent="1" source="46" target="46" edge="1">
                     <mxGeometry relative="1" as="geometry"/>

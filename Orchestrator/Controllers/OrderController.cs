@@ -13,8 +13,18 @@ public class OrderController(IBus bus, ILogger<OrderController> logger, IOrderRe
     private readonly IBus _bus = bus;
     private readonly IOrderRepository _orderRespository = orderRepository;
 
+    [HttpGet("")]
+    public async Task<ActionResult<Order>> GetAllOrders(Order order)
+    { 
+      List<Order> orders = await _orderRespository.GetAllAsync();
+
+      _logger.LogInformation("Send order: {order}", order);
+
+      return Ok(orders);
+    }
+
     [HttpPost("")]
-    public async Task<ActionResult<Order>> Post(Order order)
+    public async Task<ActionResult<Order>> PostOrder(Order order)
     { 
       order.Status = OrderStatusEnum.Created;
       var result = await _orderRespository.CreateAsync(order);
@@ -24,13 +34,18 @@ public class OrderController(IBus bus, ILogger<OrderController> logger, IOrderRe
       return Ok(result);
     }
 
-    [HttpPost("orders/{correlationId}/finish")]
-    public ActionResult UpdateOrderFinish(string correlationId)
-    {
-        _ = _orderRespository.UpdateOrderAsync(correlationId, OrderStatusEnum.Finish);
+    [HttpPost("{correlationId}/finish")]
+    public async Task<ActionResult<Order>> UpdateOrderFinish(string correlationId)
+    { 
+      Order order = await _orderRespository.GetByCorrelationId(correlationId);
 
-        _logger.LogInformation("Send kitchen order: {correlationId}", correlationId);
+      order.Status = OrderStatusEnum.Finish;
+      order.OrderFinishAt = DateTime.Now;
 
-        return Ok();
+      _ = _orderRespository.UpdateOrderAsync(correlationId, order);
+
+      _logger.LogInformation("Send kitchen order: {correlationId}", correlationId);
+
+      return Ok(order);
     }
 }

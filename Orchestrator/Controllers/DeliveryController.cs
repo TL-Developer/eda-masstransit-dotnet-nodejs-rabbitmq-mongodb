@@ -18,16 +18,19 @@ public class DeliveryController(IBus bus, ILogger<DeliveryController> logger, IO
     [HttpPost("orders/{correlationId}")]
     public async Task<ActionResult<Order>> UpdateOrderAsync(string correlationId)
     {
-        _ = _orderRespository.UpdateOrderAsync(correlationId, OrderStatusEnum.Delivered);
+      Order order = await _orderRespository.GetByCorrelationId(correlationId);
 
-      var orderFound = await _orderRespository.GetByCorrelationId(correlationId);
+      order.Status = OrderStatusEnum.Delivered;
+      order.OrderDeliveredAt = DateTime.Now;
 
-      var endpoint = await _bus.GetSendEndpoint(new Uri(ORDERS_DELIVERED));
+        _ = _orderRespository.UpdateOrderAsync(correlationId, order);
 
-      await endpoint.Send(orderFound); 
+      ISendEndpoint endpoint = await _bus.GetSendEndpoint(new Uri(ORDERS_DELIVERED));
+
+      await endpoint.Send(order); 
 
       _logger.LogInformation("Send kitchen order: {correlationId}", correlationId);
 
-      return Ok(orderFound);
+      return Ok(order);
     }
 }
