@@ -1,7 +1,6 @@
 using MassTransit;
-using orchestrator.Data;
+using orchestrator.Infra;
 using orchestrator.Repository;
-using Orchestrator.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +10,6 @@ builder.Services.AddControllers();
 
 builder.Services.AddSingleton<MongoDbService>();
 
-builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 
 builder.Services.AddMassTransit(bus =>
@@ -27,6 +25,18 @@ builder.Services.AddMassTransit(bus =>
     });
 });
 
+var  MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+builder.Services.AddCors(options => 
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+    policy =>
+    {
+        policy.WithOrigins("*");
+        policy.WithHeaders("*");
+    });
+});
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -38,5 +48,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.MapControllers();
+
+app.UseCors(MyAllowSpecificOrigins);
 
 app.Run();

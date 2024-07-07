@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{77F3FB6E-9DA5-4D3A-9515-26378F9BB685}|orchestrator.csproj|c:\\git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\orchestrator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77F3FB6E-9DA5-4D3A-9515-26378F9BB685}|orchestrator.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{77F3FB6E-9DA5-4D3A-9515-26378F9BB685}|orchestrator.csproj|c:\\git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\orchestrator\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77F3FB6E-9DA5-4D3A-9515-26378F9BB685}|orchestrator.csproj|solutionrelative:controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77F3FB6E-9DA5-4D3A-9515-26378F9BB685}|orchestrator.csproj|c:\\git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\orchestrator\\data\\mongodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77F3FB6E-9DA5-4D3A-9515-26378F9BB685}|orchestrator.csproj|solutionrelative:data\\mongodbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{77F3FB6E-9DA5-4D3A-9515-26378F9BB685}|orchestrator.csproj|c:\\git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\orchestrator\\controllers\\kitchencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77F3FB6E-9DA5-4D3A-9515-26378F9BB685}|orchestrator.csproj|solutionrelative:controllers\\kitchencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77F3FB6E-9DA5-4D3A-9515-26378F9BB685}|orchestrator.csproj|c:\\git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\orchestrator\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{77F3FB6E-9DA5-4D3A-9515-26378F9BB685}|orchestrator.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{77F3FB6E-9DA5-4D3A-9515-26378F9BB685}|orchestrator.csproj|c:\\git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\orchestrator\\controllers\\deliverycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77F3FB6E-9DA5-4D3A-9515-26378F9BB685}|orchestrator.csproj|solutionrelative:controllers\\deliverycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77F3FB6E-9DA5-4D3A-9515-26378F9BB685}|orchestrator.csproj|c:\\git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\orchestrator\\repository\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77F3FB6E-9DA5-4D3A-9515-26378F9BB685}|orchestrator.csproj|solutionrelative:repository\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACMAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-07T14:45:00.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-26T22:15:16.243Z"
+              "Title": "KitchenController.cs",
+              "DocumentMoniker": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Controllers\\KitchenController.cs",
+              "RelativeDocumentMoniker": "Controllers\\KitchenController.cs",
+              "ToolTip": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Controllers\\KitchenController.cs",
+              "RelativeToolTip": "Controllers\\KitchenController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-07T14:29:18.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DeliveryController.cs",
+              "DocumentMoniker": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Controllers\\DeliveryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DeliveryController.cs",
+              "ToolTip": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Controllers\\DeliveryController.cs",
+              "RelativeToolTip": "Controllers\\DeliveryController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAIAxwBkAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-07T14:28:57.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IOrderRepository.cs",
+              "DocumentMoniker": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Repository\\IOrderRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\IOrderRepository.cs",
+              "ToolTip": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Repository\\IOrderRepository.cs",
+              "RelativeToolTip": "Repository\\IOrderRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-07T14:25:32.699Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MongoDbService.cs",
-              "DocumentMoniker": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Data\\MongoDbService.cs",
-              "RelativeDocumentMoniker": "Data\\MongoDbService.cs",
-              "ToolTip": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Data\\MongoDbService.cs",
-              "RelativeToolTip": "Data\\MongoDbService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T22:15:13.895Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "OrderController.cs",
               "DocumentMoniker": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Controllers\\OrderController.cs",
               "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
               "ToolTip": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Controllers\\OrderController.cs",
               "RelativeToolTip": "Controllers\\OrderController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAA/AAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAABEAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T22:09:45.633Z",
+              "WhenOpened": "2024-07-07T14:24:03.435Z",
               "EditorCaption": ""
             }
           ]

@@ -1,36 +1,60 @@
+import { useCallback, useEffect, useState } from "react";
 import Card from "../components/Card";
+import { Order, OrderStatusEnum } from "../types";
+import { httpClient } from "../utils/httpClient";
+import Divider from "../components/Divider";
 
 const DeliverPage = () => {
+  const [orders, setOrders] = useState<Order[]>([]);
+
+  const fetchOrders = useCallback(async () => {
+    try {
+      const ordersResult: Order[] = await httpClient.get(`/orders?status=${OrderStatusEnum.Delivered}`);
+
+      setOrders(ordersResult);
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchOrders();
+  }, [fetchOrders]);
+
+  const handleFinish = async (order: Order) => {
+    try {
+      await httpClient.post(`/orders/${order.correlationId}/finish`);
+
+      alert('Pedido enviado para cozinha');
+      fetchOrders();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
-    <div className="flex gap-5">
-      <Card
-        title="Nerd Burger"
-        btn="Pedido entregue"
-        description="Hamburger simples"
-        tags={['#Burger']}
-        handleClick={() => {}}
-      />
-      <Card
-        title="Nerd Salada"
-        btn="Pedido entregue"
-        description="Hamburger simples com salada"
-        tags={['#Salada']}
-        handleClick={() => {}}
-      />
-      <Card
-        title="Nerd Dog"
-        btn="Pedido entregue"
-        description="O doguinho preferido"
-        tags={['#Dog']}
-        handleClick={() => {}}
-      />
-      <Card
-        title="Nerdão"
-        btn="Pedido entregue"
-        description="O hamburguer completão"
-        tags={['#Tudo']}
-        handleClick={() => {}}
-      />
+    <div className="flex flex-col gap-5">
+      <section>
+        <h1 className="text-7xl">ENTREGA 🛵🏍️</h1>
+      </section>
+      <Divider />
+      <section className="border p-5">
+        <div className="p-5 font-bold font-underline">
+          FILA DE PEDIDOS PARA ENTREGA
+        </div>
+        {orders?.length > 0 && orders.map(({ correlationId, customerName, productName }) => (
+          <Card
+            key={correlationId}
+            title={productName}
+            btn="Finalizar pedido"
+            customerName={customerName}
+            handleClick={(order) => handleFinish({
+              ...order,
+              correlationId,
+            })}
+          />
+        ))}
+      </section>
     </div>
   );
 }

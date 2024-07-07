@@ -1,6 +1,6 @@
 ﻿using MongoDB.Driver;
 
-namespace orchestrator.Data
+namespace orchestrator.Infra
 {
     public class MongoDbService
     {

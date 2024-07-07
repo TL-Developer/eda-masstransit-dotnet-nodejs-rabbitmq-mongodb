@@ -1,6 +1,5 @@
-using MongoDB.Bson;
 using MongoDB.Driver;
-using orchestrator.Data;
+using orchestrator.Infra;
 using Orchestrator.Entities;
 
 namespace orchestrator.Repository
@@ -20,22 +19,27 @@ namespace orchestrator.Repository
             return order;
         }
 
-        public async Task<List<Order>> GetAllAsync()
+        public async Task<List<Order>> GetAllByStatusAsync(OrderStatusEnum orderStatus)
         {
-            return await _orders.Find(FilterDefinition<Order>.Empty).ToListAsync();
+            return await _orders.Find(order => order.Status == orderStatus).ToListAsync();
         }
 
-        public async Task<Order> GetByCorrelationId(string correlationId)
+        public async Task<List<Order>> GetAllByCustomerNameAsync(string customerName)
+        {
+            return await _orders.Find(order => order.CustomerName == customerName).ToListAsync();
+        }
+
+        public Order GetByCorrelationId(string correlationId)
         {
             var filter = Builders<Order>.Filter.Eq(order => order.CorrelationId, correlationId);
 
             return _orders.Find(filter).FirstOrDefault();
         }
 
-        public async Task UpdateOrderAsync(string correlationId, Order order)
+        public void UpdateOrder(string correlationId, Order order)
         {
-           var filter = Builders<Order>.Filter.Eq(or => or.CorrelationId, correlationId);
-           
+            var filter = Builders<Order>.Filter.Eq(or => or.CorrelationId, correlationId);
+
             _orders.ReplaceOne(filter, order);
         }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NGrvxHrrzznCORfZJ6sQ7tc18poNbLVqeaNVP6/h2iBo0C+E72Uq1cJPQB48L4LtxAOJAqm9Wlh96Eu5cl8OGQ==",
+  "dgSpecHash": "/25sMPuieU/A7ydIOdlGZbIKLcsnAE26OoV2pB+8FUIoe27wkm35PUs2E0YA0psinuXqTbCafyhAcCneP7Ov6A==",
   "success": true,
-  "projectFilePath": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\orchestrator.csproj",
+  "projectFilePath": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Orchestrator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tiago Lima\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Tiago Lima\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
