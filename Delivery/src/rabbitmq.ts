@@ -30,7 +30,7 @@ export class SetupRabbitMq {
   }
 
   public sendMessage(payload: any) {
-    Logger.info('Cooking Order');
+    Logger.info('Delivery Order');
     const message = JSON.stringify(payload);
     this.channel.sendToQueue(this.DELIVERED_QUEUE, Buffer.from(message));
   }

@@ -55,8 +55,7 @@
               "RelativeToolTip": "Controllers\\KitchenController.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T14:29:18.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T14:29:18.874Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "Controllers\\DeliveryController.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAIAxwBkAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T14:28:57.633Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T14:28:57.633Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "Repository\\IOrderRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T14:25:32.699Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T14:25:32.699Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "Controllers\\OrderController.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAAABEAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-07T14:24:03.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-07T14:24:03.435Z"
             }
           ]
         }
