@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NGrvxHrrzznCORfZJ6sQ7tc18poNbLVqeaNVP6/h2iBo0C+E72Uq1cJPQB48L4LtxAOJAqm9Wlh96Eu5cl8OGQ==",
+  "dgSpecHash": "qmFD9LendQRaMIgYrrYCVMi1K6+leE5ka/TFSfNkn1CCxwRWHWMTPvGeKI+3Hm7/h4JbpwSS/aTAleB1mWjy3w==",
   "success": true,
-  "projectFilePath": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\orchestrator.csproj",
+  "projectFilePath": "C:\\Git\\eda-masstransit-dotnet-nodejs-rabbitmq-mongodb\\Orchestrator\\Orchestrator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tiago Lima\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Tiago Lima\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
@@ -24,6 +24,7 @@
     "C:\\Users\\Tiago Lima\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\Tiago Lima\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\Tiago Lima\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\Tiago Lima\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\microsoft.visualstudio.azure.containers.tools.targets.1.19.6.nupkg.sha512",
     "C:\\Users\\Tiago Lima\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Tiago Lima\\.nuget\\packages\\mongodb.bson\\2.26.0\\mongodb.bson.2.26.0.nupkg.sha512",
     "C:\\Users\\Tiago Lima\\.nuget\\packages\\mongodb.driver\\2.26.0\\mongodb.driver.2.26.0.nupkg.sha512",

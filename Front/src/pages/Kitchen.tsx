@@ -60,7 +60,7 @@ const KitchenPage = () => {
           FILA DE PEDIDOS PARA PREPARAR
         </div>
         
-        {orders?.length > 0 && orders.map(({ correlationId, customerName, productName }) => (
+        {orders && orders?.length > 0 && orders.map(({ correlationId, customerName, productName }) => (
           <Card
             key={correlationId}
             title={productName}

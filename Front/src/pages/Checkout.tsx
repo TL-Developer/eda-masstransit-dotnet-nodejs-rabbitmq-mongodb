@@ -125,7 +125,7 @@ CheckoutPage.MeusPedidos = () => {
   return (
     <div className="flex flex-col gap-5">    
       <section className="flex gap-5">
-        {orders.map(({
+        {orders && orders.map(({
           correlationId,
           productName,
           orderCreatedAt,

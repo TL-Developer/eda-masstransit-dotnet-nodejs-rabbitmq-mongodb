@@ -42,7 +42,7 @@ const DeliverPage = () => {
         <div className="p-5 font-bold font-underline">
           FILA DE PEDIDOS PARA ENTREGA
         </div>
-        {orders?.length > 0 && orders.map(({ correlationId, customerName, productName }) => (
+        {orders && orders?.length > 0 && orders.map(({ correlationId, customerName, productName }) => (
           <Card
             key={correlationId}
             title={productName}

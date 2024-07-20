@@ -8,6 +8,7 @@ networks:
 
 services:
   rabbitmq:
+    container_name: rabbitmq
     image: masstransit/rabbitmq:3.13
     ports:
       - 5672:5672
@@ -17,6 +18,7 @@ services:
       - app-network
 
   mongodb:
+    container_name: mongodb
     image: mongo:7.0.0
     restart: always
     ports:
@@ -28,6 +30,7 @@ services:
       - app-network
 
   prometheus:
+    container_name: prometheus
     image: prom/prometheus:v2.45.6
     ports:
       - 9090:9090
@@ -42,8 +45,75 @@ services:
       - app-network
 
   grafana:
+    container_name: grafana
     image: grafana/grafana:9.5.20
     ports:
       - 3500:3000
+    networks:
+      - app-network
+
+  orchestrator:
+    container_name: orchestrator
+    build: ./Orchestrator/
+    ports:
+      - 5103:8080
+    depends_on:
+      - mongodb
+      - rabbitmq
+    restart: always
+    environment:
+      - ConnectionStrings:Mongodb=mongodb://root:root@mongodb:27017/nerdburguer-orchestrator?authSource=admin
+      - RabbitMQ:Host=rabbitmq
+      - RabbitMQ:User=guest
+      - RabbitMQ:Pass=guest
+    networks:
+      - app-network
+
+  kitchen:
+    container_name: kitchen
+    build: ./Kitchen/
+    ports:
+      - 8088:8088
+    environment:
+      - PORT=8088
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USER=guest
+      - RABBITMQ_PASS=guest
+      - RABBITMQ_HOST=rabbitmq
+      - MONGODB_CONNECTION_STRING=mongodb://root:root@mongodb:27017/nerdburguer-kitchen?authSource=admin
+    depends_on:
+      - mongodb
+      - rabbitmq
+    restart: always
+    networks:
+      - app-network
+
+  delivery:
+    container_name: delivery
+    build: ./Delivery/
+    ports:
+      - 9099:9099
+    environment:
+      - PORT=9099
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USER=guest
+      - RABBITMQ_PASS=guest
+      - RABBITMQ_HOST=rabbitmq
+      - MONGODB_CONNECTION_STRING=mongodb://root:root@mongodb:27017/nerdburguer-delivery?authSource=admin
+    depends_on:
+      - mongodb
+      - rabbitmq
+    restart: always
+    networks:
+      - app-network
+
+  front:
+    container_name: front
+    build: ./Front/
+    depends_on:
+      - orchestrator
+    ports:
+      - 3300:80
+    restart: always
     networks:
       - app-network
