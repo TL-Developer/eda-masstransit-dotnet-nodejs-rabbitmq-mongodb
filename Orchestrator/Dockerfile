@@ -6,10 +6,10 @@ WORKDIR /app
 EXPOSE 5103
 EXPOSE 8080
 
-ENV RabbitMQ:Host=host.docker.internal
+ENV RabbitMQ:Host=localhost
 ENV RabbitMQ:User=guest
 ENV RabbitMQ:Pass=guest
-ENV ConnectionStrings:Mongodb=mongodb://root:root@host.docker.internal:27017/nerdburguer-orchestrator?authSource=admin
+ENV ConnectionStrings:Mongodb=mongodb://root:root@localhost:27017/nerdburguer-orchestrator?authSource=admin
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
